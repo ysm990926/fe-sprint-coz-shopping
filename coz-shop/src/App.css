@@ -52,15 +52,20 @@
   cursor: pointer;
 }
 
-.page_Container{
-  background-color: aqua;
+.flex_Container{
   display: flex;
+  justify-content: center;
 }
-
+.page_Container{
+  justify-content: center;
+}
 .menuCon{
-  right: 120px;
+  top : 80px;
+  left : 960px;
   position: fixed;
   list-style-type: none;
+  z-index: 999;
+  background-color: #FFFFFF;
 }
 
 .menuBox{
@@ -80,4 +85,99 @@ a{
 .footer{
   text-align: center;
   color: #888888;
+}
+
+.product_img{
+  width: 264px;
+  height: 210px;
+  border-radius: 12px;
+}
+
+.Product_Container{
+  width: 264px;
+  height: 264px;
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.Product_Page_Container{
+  justify-content: center;
+  display: flex;
+  width : 1280px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.detail_container{
+  display: flex;
+  justify-content: space-between;
+  width: 264px;
+}
+
+.title_font,.brand{
+  font-family: Inter;
+font-size: 16px;
+font-weight: 800;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.sale{
+  color: #452cdd;
+  font-family: Inter;
+font-size: 16px;
+font-weight: 800;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.right{
+  text-align: right;
+  width: 264px;
+  margin-top:5px;
+}
+
+.left{
+  font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+margin-top:5px;
+}
+.Right{
+  text-align: right;
+  width: 264px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: right; 
+  margin-top:5px;
+}
+.on-off{
+  position: absolute;
+  right: 10px;
+  bottom: 65px;
+}
+
+.Title{
+  margin-left:76px;
+  margin-top:24px;
+}
+
+.Title2{
+  margin-left:76px;
+  margin-top:12px;
+}
+
+.root{
+  max-width: 1280px;
 }
