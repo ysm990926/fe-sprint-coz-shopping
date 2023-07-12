@@ -5,7 +5,7 @@ return <header className="headerContainer">
 <div className='LogoCon'>
 <Link to='/'>
     <span className='Logo'>
-      <img src='logo.png' />
+      <img src={process.env.PUBLIC_URL + '/logo.png'} />
     </span>
 </Link>
 <Link to='/'>
@@ -15,7 +15,7 @@ return <header className="headerContainer">
 </Link>
 </div>
 <span className='menu' onClick={menuHandle}>
-<img src='menu.png' />
+<img src={process.env.PUBLIC_URL + '/menu.png'}/>
 </span>
 </header>
 }
