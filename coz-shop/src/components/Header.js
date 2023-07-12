@@ -8,9 +8,11 @@ return <header className="headerContainer">
       <img src='logo.png' />
     </span>
 </Link>
+<Link to='/'>
 <span className="Logo-title">
     COZ Shopping
 </span>
+</Link>
 </div>
 <span className='menu' onClick={menuHandle}>
 <img src='menu.png' />

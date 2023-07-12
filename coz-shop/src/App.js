@@ -5,6 +5,7 @@ import { Route,Routes } from 'react-router-dom';
 import Main from './components/Main';
 import Bookmark from './components/Bookmark';
 import ProductsList from './components/ProductsList';
+import Footer from './components/Footer';
 function App() {
   const [menuOn , setMenuOn] = useState(false)
   const menuHandle = () =>{
@@ -18,6 +19,7 @@ function App() {
         <Route path='/products/list' element={<ProductsList menuOn={menuOn} menuHandle={menuHandle}/>} />
         <Route path='/bookmark' element={<Bookmark menuOn={menuOn} menuHandle={menuHandle}/>} />
       </Routes>
+      <Footer />
     </div>
   );
 }
