@@ -24,10 +24,10 @@ const Bookmark = ({menuOn,menuHandle,bookmark,bookmarkHandle,toastEvent,filterRe
    },[focus,bookmark])
    
     return <div className="page_Container">
-        {toastEvent ? <Toast messege={filterResult? delMessege : addMessege} markOn={filterResult? false : true}/> : ''}
+        {toastEvent ? <Toast messege={filterResult? delMessege : addMessege} markOn={filterResult? false : true}/> : null}
         <Category focus={focus} focusHandle={focusHandle} />
     <div>
-        {menuOn? <Menu menuHandle={menuHandle}/> : ''}
+        {menuOn? <Menu menuHandle={menuHandle}/> : null}
     </div>
     <div className="Product_Page_Container">
    {curruntArr.length? curruntArr.map((el,index)=> <section className="Product_Container" key ={index}><Product obj={el} key ={el.id} bookmarkHandle={bookmarkHandle} bookmark={bookmark} /> </section>) : <section className="bookmark_help">새로운 상품을 북마크 해보세요</section>}

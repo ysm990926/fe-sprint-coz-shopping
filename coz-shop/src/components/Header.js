@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Header = ({menuHandle}) => {
+  const envURL = process.env.PUBLIC_URL
 return <header className="headerContainer">
 <div className='LogoCon'>
 <Link to='/'>
     <span className='Logo'>
-      <img src={process.env.PUBLIC_URL + '/logo.png'} />
+      <img src={envURL + '/logo.png'} />
     </span>
 </Link>
 <Link to='/'>
@@ -15,7 +16,7 @@ return <header className="headerContainer">
 </Link>
 </div>
 <span className='menu' onClick={menuHandle}>
-<img src={process.env.PUBLIC_URL + '/menu.png'}/>
+<img src={envURL + '/menu.png'}/>
 </span>
 </header>
 }
