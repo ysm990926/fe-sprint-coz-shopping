@@ -2,8 +2,11 @@ import axios from "axios"
 import Menu from "./menu"
 import { useState,useEffect} from "react"
 import Product from "./Product"
-const Main = ({menuOn,menuHandle}) => {
-        const [countArr,setCountArr] = useState([])     
+import Toast from "./Toast"
+const Main = ({menuOn,menuHandle,bookmark,bookmarkHandle,toastEvent,filterResult}) => {
+        const [countArr,setCountArr] = useState([])
+        const addMessege = '북마크에 추가되었습니다.'
+        const delMessege = '북마크가 제거되었습니다.'
         useEffect(()=>{
             axios
             .get("http://cozshopping.codestates-seb.link/api/v1/products?count=4")
@@ -12,17 +15,18 @@ const Main = ({menuOn,menuHandle}) => {
               })
           },[])
     return <main className="page_Container">  
+    {toastEvent ? <Toast messege={filterResult? delMessege : addMessege} markOn={filterResult? false : true}/> : ''}
        {menuOn? <Menu menuHandle={menuHandle}/> : ''}
        <h1 className="Title">상품 리스트</h1>
        <div className="flex_Container">
        <div className="Product_Page_Container">
-       {countArr? countArr.map((el,index)=> <section className="Product_Container"><Product obj={el} key ={index} /> </section>) : ''}
+       {countArr? countArr.map((el,index)=> <section className="Product_Container"><Product obj={el} key ={index} bookmarkHandle={bookmarkHandle} bookmark={bookmark}/> </section>) : ''}
    </div>
    </div>
      <h1 className="Title2">북마크 리스트</h1>
      <div className="flex_Container">
        <div className="Product_Page_Container">
-       {countArr? countArr.map((el,index)=> <section className="Product_Container"><Product obj={el} key ={index} /> </section>) : ''}
+       {bookmark? bookmark.map((el,index)=> {return index < 4 ? <section className="Product_Container"><Product obj={el} key ={index} bookmarkHandle={bookmarkHandle} bookmark={bookmark}/> </section> : ''} ) : ''}
    </div>
    </div>
     </main> 

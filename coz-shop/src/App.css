@@ -57,7 +57,11 @@
   justify-content: center;
 }
 .page_Container{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center
+  
 }
 .menuCon{
   top : 80px;
@@ -91,6 +95,7 @@ a{
   width: 264px;
   height: 210px;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .Product_Container{
@@ -115,6 +120,7 @@ a{
   display: flex;
   justify-content: space-between;
   width: 264px;
+  white-space: nowrap;
 }
 
 .title_font,.brand{
@@ -166,18 +172,183 @@ margin-top:5px;
   position: absolute;
   right: 10px;
   bottom: 65px;
+  cursor: pointer;
 }
 
 .Title{
-  margin-left:76px;
   margin-top:24px;
 }
 
 .Title2{
-  margin-left:76px;
   margin-top:12px;
 }
 
 .root{
   max-width: 1280px;
+}
+
+.category_Container{
+  width: 554px;
+  height: 122px;
+  display: flex;
+  justify-items: center;
+  gap : 36px;
+  margin-top: 24px;
+}
+
+.category_img{
+  width: 82px;
+  height: 82px;
+  cursor: pointer;
+}
+
+.columnContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.category_title{
+  text-align: center;
+  margin-top: 6.5px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.focus{
+  text-align: center;
+  margin-top: 6px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  color: #452cdd;
+  text-decoration-line: underline;
+}
+
+.bookmark_help{
+  text-align: center;
+  width: 1000px;
+  height: 360px;
+  font-size: 3em;
+  display: grid;
+  place-items: center;
+}
+
+.Toast{
+  display: flex;
+  border-radius: 12px;
+  background: whitesmoke;
+  width: 291px;
+  height: 52px;
+  border: 1px;
+}
+
+.Toast_on_img{
+  height: 32px;
+  width: 32px;
+  display: grid;
+  place-items: center;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
+.Toast_off_img{
+  height: 26px;
+  width: 26px;
+  display: grid;
+  place-items: center;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
+.toast_off_text{
+  margin-left: 16px;
+  justify-content: center;
+  display: grid;
+  place-items: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.toast_on_text{
+  margin-left: 10px;
+  justify-content: center;
+  display: grid;
+  place-items: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.modal_img{
+  width: 744px;
+  height: 480px;
+  border-radius: 12px;
+}
+
+.modal_Container{
+  position: fixed;
+  top: 562px;
+  left: 45.5%;
+  transform: translate(-80%, -75%);
+  z-index: 999;
+  position: fixed;
+}
+
+.closeBtn{
+  font-size: 50px;
+  position: absolute;
+  right: 24.4px;
+  cursor: pointer;
+}
+
+.modal_off{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.modal_on{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+.modal_font{
+  position: absolute;
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  left:60px;
+  bottom: 22px;
+}
+
+.toast_Container{
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  z-index: 5;
 }
