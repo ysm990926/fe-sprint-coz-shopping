@@ -23,13 +23,13 @@ const ProductsList = ({menuOn,menuHandle,ProductArr,bookmark,bookmarkHandle,toas
       }
    },[focus])
    return <div className="page_Container">
-      {toastEvent ? <Toast messege={filterResult? delMessege : addMessege} markOn={filterResult? false : true}/> : ''}
+      {toastEvent ? <Toast messege={filterResult? delMessege : addMessege} markOn={filterResult? false : true}/> : null}
       <Category focus={focus} focusHandle={focusHandle} />
    <div>
-    {menuOn? <Menu menuHandle={menuHandle}/> : ''}
+    {menuOn? <Menu menuHandle={menuHandle}/> : null}
    </div>
    <div className="Product_Page_Container">
-   {curruntArr? curruntArr.map((el,index)=> <section className="Product_Container" key ={index}><Product obj={el} key ={el.id} bookmarkHandle={bookmarkHandle} bookmark={bookmark} /> </section>) : ''}
+   {curruntArr? curruntArr.map((el,index)=> <section className="Product_Container" key ={index}><Product obj={el} key ={el.id} bookmarkHandle={bookmarkHandle} bookmark={bookmark} /> </section>) : null}
    </div>
    </div>
 }

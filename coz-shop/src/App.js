@@ -13,12 +13,13 @@ function App() {
   const [bookmark,setBookMark] = useState([])
   const [toastEvent, setToastEvent] = useState(false)
   const [filterResult,setFilterResult] = useState(false)
+  const URL = "http://cozshopping.codestates-seb.link/api/v1/products"
   const menuHandle = () =>{
     setMenuOn(!menuOn)
   }
   useEffect(()=>{
     axios
-    .get("http://cozshopping.codestates-seb.link/api/v1/products")
+    .get(URL)
     .then((res)=>{
       setProductArr(res.data)
       })
